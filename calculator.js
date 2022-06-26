@@ -1,3 +1,4 @@
+// Functions
 const add = function (a, b) {
     return a + b;
 };
@@ -29,10 +30,10 @@ const operate = function (operator, a, b) {
     }
 };
 
-module.exports = {
-    add,
-    subtract,
-    multiply,
-    divide,
-    operate,
-};
+//Dom Elements
+const screen = document.getElementById("screen");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.onclick = () => screen.textContent = button.value;
+});
